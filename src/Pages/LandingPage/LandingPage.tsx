@@ -4,9 +4,9 @@ const LandingPage = () => {
   return (
     <div className="flex justify-center items-center">
       <LightsBoard
-        topBottomLightNumber={10}
-        middleSideLightNumber={4}
-        rotationAngle={20}
+        topBottomLightNumber={20}
+        middleSideLightNumber={3}
+        rotationAngle={0}
         text="Muhammad Moeez"
       />
     </div>

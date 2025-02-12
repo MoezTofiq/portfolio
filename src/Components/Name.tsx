@@ -30,7 +30,7 @@ const LightsBoard: React.FC<props> = ({
       </div>
       <div
         id="middleLayer"
-        className="px-1 p-0 flex flex-row justify-between items-center"
+        className="px-1 p-0 flex flex-row justify-between items-center w-[100%]"
       >
         <div id="rightLights" className="flex flex-col ">
           {Array.from({ length: middleSideLightNumber }).map((_, index) => (
@@ -39,10 +39,12 @@ const LightsBoard: React.FC<props> = ({
         </div>
         <div
           id="nameSection"
-          className="flex flex-col justify-center items-center"
+          className="flex flex-col justify-center items-center  w-[100%]"
         >
-          <div className="bg-blue-200 m-1 p-4 rounded-2xl">
-            <div className="">{text}</div>
+          <div className="bg-blue-200 m-1 p-4 rounded-2xl  w-[95%]">
+            <div className="flex flex-col justify-center items-center">
+              {text}
+            </div>
           </div>
         </div>
         <div id="leftLights" className="flex flex-col">
