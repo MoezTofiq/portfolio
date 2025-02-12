@@ -6,7 +6,7 @@ const LandingPage = () => {
       <LightsBoard
         topBottomLightNumber={20}
         middleSideLightNumber={3}
-        rotationAngle={0}
+        rotationAngle={5}
         text="Muhammad Moeez"
       />
     </div>
