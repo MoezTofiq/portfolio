@@ -1,9 +1,14 @@
-import Name from "../../Components/Name";
+import LightsBoard from "../../Components/Name";
 
 const LandingPage = () => {
   return (
     <div className="flex justify-center items-center">
-      <Name />
+      <LightsBoard
+        topBottomLightNumber={10}
+        middleSideLightNumber={4}
+        rotationAngle={20}
+        text="Muhammad Moeez"
+      />
     </div>
   );
 };
