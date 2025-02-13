@@ -13,10 +13,10 @@
 
 }
 .text-shadow {
-    text-shadow: 0 0 12px #fff;
+    /* text-shadow: 0 0 12px black; */
 }
 
 .text-shadow:hover {
-    text-shadow: 0 0 25px #ced0ae;
+    /* text-shadow: 0 0 25px black; */
     transform: rotate(0) !important;
 }
