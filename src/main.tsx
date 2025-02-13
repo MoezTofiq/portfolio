@@ -8,6 +8,7 @@ import Contact from "./Pages/Contact/Contact.tsx";
 import Credits from "./Pages/Credites/Credites.tsx";
 import PersonalProjects from "./Pages/PersonalProjects/PersonalProjects.tsx";
 import WorkExperience from "./Pages/WorkExperience/WorkExperience.tsx";
+import BackgroundSky from "./Components/backgroundSky.tsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,8 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    <BackgroundSky />
+
     <RouterProvider router={router} />
   </StrictMode>
 );
