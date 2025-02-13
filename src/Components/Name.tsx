@@ -1,23 +1,30 @@
 import React from "react";
-import LightCircle from "./LightCircle";
+// import LightCircle from "./LightCircle";
+
+const LightCircle = () => {
+  return (
+    <span className="h-[24px] w-[25px] bg-amber-200 rounded-4xl inline-block m-0.5 shadow-[0_0_8px_4px_rgba(255,191,71,0.4),0_0_8px_6px_rgba(255,191,71,0.6)]"
+    />
+  );
+};
 
 interface props {
   topBottomLightNumber: number;
   middleSideLightNumber: number;
-  text: string;
+  inputText: string[];
   rotationAngle: number;
 }
 
 const LightsBoard: React.FC<props> = ({
   topBottomLightNumber,
   middleSideLightNumber,
-  text,
+  inputText,
   rotationAngle,
 }) => {
   return (
     <div
       id="red"
-      className={`bg-red-400 border rounded-2xl flex justify-center items-center flex-col mt-12 `}
+      className="bg-red-400 border rounded-2xl flex justify-center items-center flex-col mt-12 shadow-[0_0_30px_18px_rgba(255,0,0,0.5),0_0_30px_rgba(255,0,0,0.7)]"
       style={{ transform: `rotate(${rotationAngle}deg)` }}
     >
       <div
@@ -43,7 +50,9 @@ const LightsBoard: React.FC<props> = ({
         >
           <div className="bg-amber-100 m-1 p-4 rounded-2xl  w-[95%]">
             <div className="flex flex-col justify-center items-center font-extrabold text-5xl text-black font-sans">
-              {text}
+              {inputText.map((line: string) => (
+                <p>{line}</p>
+              ))}
             </div>
           </div>
         </div>
