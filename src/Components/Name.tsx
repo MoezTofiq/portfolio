@@ -48,7 +48,7 @@ const LightsBoard: React.FC<props> = ({
           id="nameSection"
           className="flex flex-col justify-center items-center  w-[100%]"
         >
-          <div className="bg-amber-100 m-1 p-4 rounded-2xl  w-[95%]">
+          <div className="bg-amber-100 m-1 p-4 rounded-2xl  w-[95%] shadow-[0_0_8px_4px_rgba(255,191,71,0.4),0_0_8px_6px_rgba(255,191,71,0.6)]">
             <div className="flex flex-col justify-center items-center font-extrabold text-5xl text-black font-sans">
               {inputText.map((line: string) => (
                 <p>{line}</p>
