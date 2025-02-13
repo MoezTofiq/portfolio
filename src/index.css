@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 #root {
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,4 +11,12 @@
     width: 100%;
     padding: 0;
 
+}
+.text-shadow {
+    text-shadow: 0 0 12px #fff;
+}
+
+.text-shadow:hover {
+    text-shadow: 0 0 25px #ced0ae;
+    transform: rotate(0) !important;
 }
