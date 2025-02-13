@@ -4,10 +4,10 @@ const LandingPage = () => {
   return (
     <div className="flex justify-center items-center">
       <LightsBoard
-        topBottomLightNumber={40}
+        topBottomLightNumber={20}
         middleSideLightNumber={5}
         rotationAngle={5}
-        inputText={["Muhammad", "Moeez"]}
+        inputText={["Muhammad Moeez"]}
       />
     </div>
   );

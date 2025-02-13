@@ -56,7 +56,10 @@ const LightsBoard: React.FC<props> = ({
       >
         <div id="leftLights" className="flex flex-col ">
           {Array.from({ length: middleSideLightNumber }).map((_, index) => (
-            <LightCircle key={index} isActive={index % 2 === activeLight % 2} />
+            <LightCircle
+              key={index}
+              isActive={!(index % 2 === activeLight % 2)}
+            />
           ))}
         </div>
         <div
