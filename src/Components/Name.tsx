@@ -19,7 +19,7 @@ const LightsBoard: React.FC<props> = ({
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // setActiveLight((prev) => (prev + 1) % totalLights);
+      setActiveLight((prev) => (prev + 1) % totalLights);
     }, 500);
     return () => clearInterval(interval);
   });

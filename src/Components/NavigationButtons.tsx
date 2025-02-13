@@ -5,7 +5,7 @@ const NavigationButtons = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-row justify-center items-center gap-28 z-10  ">
+    <div className="flex flex-row justify-center items-center gap-28 z-10  pt-5">
       <NavigationButton
         onClick={() => navigate("/about_me")}
         tilt={15}
