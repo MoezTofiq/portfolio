@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
   },
   {
-    path: "/contact",
+    path: "/contact_me",
     element: <Contact></Contact>,
     errorElement: <ErrorPage></ErrorPage>,
   },
@@ -27,12 +27,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
   },
   {
-    path: "/personalProjects",
+    path: "/personal_projects",
     element: <PersonalProjects></PersonalProjects>,
     errorElement: <ErrorPage></ErrorPage>,
   },
   {
-    path: "/workExperience",
+    path: "/work_experience",
     element: <WorkExperience></WorkExperience>,
     errorElement: <ErrorPage></ErrorPage>,
   },
