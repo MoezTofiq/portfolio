@@ -17,7 +17,7 @@ const LightsBoard: React.FC<props> = ({
   return (
     <div
       id="red"
-      className={`bg-red-400 border rounded-2xl flex justify-center items-center flex-col mt-12`}
+      className={`bg-red-400 border rounded-2xl flex justify-center items-center flex-col mt-12 `}
       style={{ transform: `rotate(${rotationAngle}deg)` }}
     >
       <div
@@ -41,8 +41,8 @@ const LightsBoard: React.FC<props> = ({
           id="nameSection"
           className="flex flex-col justify-center items-center  w-[100%]"
         >
-          <div className="bg-blue-200 m-1 p-4 rounded-2xl  w-[95%]">
-            <div className="flex flex-col justify-center items-center">
+          <div className="bg-amber-100 m-1 p-4 rounded-2xl  w-[95%]">
+            <div className="flex flex-col justify-center items-center font-extrabold text-5xl text-black font-sans">
               {text}
             </div>
           </div>
