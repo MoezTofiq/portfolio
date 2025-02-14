@@ -10,6 +10,7 @@ import WorkExperience from "./Pages/WorkExperience/WorkExperience.tsx";
 import BackgroundSky from "./Components/backgroundSky.tsx";
 import Home from "./Pages/Home/Home.tsx";
 import NavigationButtons from "./Components/NavigationButtons.tsx";
+import { AboutMe } from "./Pages/AboutMe/AboutMe.tsx";
 
 const Layout = () => {
   return (
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Home /> },
+      { path: "/about_me", element: <AboutMe /> },
       { path: "/contact_me", element: <Contact /> },
       { path: "/credits", element: <Credits /> },
       { path: "/personal_projects", element: <PersonalProjects /> },

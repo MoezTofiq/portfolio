@@ -6,7 +6,7 @@ const NavigationButton: React.FC<{
 }> = ({ text, index, isSelected, setSelected }) => {
   return (
     <div
-      className={`transition-all duration-300 flex flex-col  text-3xl cursor-pointer ${
+      className={`transition-all duration-300 flex flex-col  text-2xl cursor-pointer ${
         isSelected ? "w-70 text-amber-100" : "w-20 text-white"
       } `}
       onClick={() => {
