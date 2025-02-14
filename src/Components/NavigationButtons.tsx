@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const buttons = [
   "Home",
-  "About Me",
+  // "About Me",
   "Work Experience",
   "Personal Projects",
   "Website Credit",
@@ -21,36 +21,36 @@ const NavigationButtons = () => {
       isFirstRender.current = false;
       console.log("first render");
       return;
-    }
-
-    switch (selected) {
-      case 1:
-        navigate("/");
-        console.log("home");
-        break;
-      case 2:
-        navigate("/about_me");
-        console.log("about me");
-        break;
-      case 3:
-        navigate("/personal_projects");
-        console.log("personal projects");
-        break;
-      case 4:
-        navigate("/work_experience");
-        console.log("work experience");
-        break;
-      case 5:
-        navigate("/credits");
-        console.log("credits");
-        break;
-      case 6:
-        navigate("/contact_me");
-        console.log("contact me");
-        break;
-      default:
-        console.log("route not found");
-        break;
+    } else {
+      switch (selected) {
+        case 1:
+          navigate("/");
+          console.log("home");
+          break;
+        case 0:
+          navigate("/about_me");
+          console.log("about me");
+          break;
+        case 2:
+          navigate("/personal_projects");
+          console.log("personal projects");
+          break;
+        case 3:
+          navigate("/work_experience");
+          console.log("work experience");
+          break;
+        case 4:
+          navigate("/credits");
+          console.log("credits");
+          break;
+        case 5:
+          navigate("/contact_me");
+          console.log("contact me");
+          break;
+        default:
+          console.log("route not found");
+          break;
+      }
     }
   }, [selected]);
 
@@ -60,7 +60,7 @@ const NavigationButtons = () => {
         <NavigationButton
           key={index + 1}
           text={button}
-          index={index}
+          index={index + 1}
           isSelected={selected === index + 1}
           setSelected={setSelected}
         />

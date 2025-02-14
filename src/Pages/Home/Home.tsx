@@ -1,7 +1,6 @@
 import LightsBoard from "../../Components/Name";
-import NavigationButtons from "../../Components/NavigationButtons";
 
-const LandingPage = () => {
+const Home = () => {
   return (
     <div className="flex justify-center items-center flex-col  z-10">
       <LightsBoard
@@ -18,10 +17,8 @@ const LandingPage = () => {
       >
         <p>Full Stack Software Developer </p>
       </div>
-
-      <NavigationButtons />
     </div>
   );
 };
 
-export default LandingPage;
+export default Home;
