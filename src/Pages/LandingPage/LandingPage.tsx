@@ -1,6 +1,5 @@
 import LightsBoard from "../../Components/Name";
-import NavigationButton from "../../Components/NavigationButton";
-
+import NavigationButtons from "../../Components/NavigationButtons";
 
 const LandingPage = () => {
   return (
@@ -20,7 +19,7 @@ const LandingPage = () => {
         <p>Full Stack Software Developer </p>
       </div>
 
-      {/* <NavigationButtons /> */}
+      <NavigationButtons />
     </div>
   );
 };
