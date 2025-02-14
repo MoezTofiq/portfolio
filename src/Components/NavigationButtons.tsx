@@ -55,16 +55,18 @@ const NavigationButtons = () => {
   }, [selected]);
 
   return (
-    <div className="flex flex-row justify-center items-center gap-5 z-10  pt-5 transition-all duration-300 p-10">
-      {buttons.map((button, index) => (
-        <NavigationButton
-          key={index + 1}
-          text={button}
-          index={index + 1}
-          isSelected={selected === index + 1}
-          setSelected={setSelected}
-        />
-      ))}
+    <div className="z-10 absolute bottom-0 right-5">
+      <div className="flex flex-row justify-center items-center gap-5 z-10 transition-all duration-300 m-14">
+        {buttons.map((button, index) => (
+          <NavigationButton
+            key={index + 1}
+            text={button}
+            index={index + 1}
+            isSelected={selected === index + 1}
+            setSelected={setSelected}
+          />
+        ))}
+      </div>
     </div>
   );
 };

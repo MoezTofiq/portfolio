@@ -6,7 +6,7 @@ const NavigationButton: React.FC<{
 }> = ({ text, index, isSelected, setSelected }) => {
   return (
     <div
-      className={`transition-all duration-300 flex flex-col  text-2xl ${
+      className={`transition-all duration-300 flex flex-col  text-3xl cursor-pointer ${
         isSelected ? "w-70 text-amber-100" : "w-20 text-white"
       } `}
       onClick={() => {
@@ -15,7 +15,9 @@ const NavigationButton: React.FC<{
     >
       <div
         className={`justify-end flex-nowrap  text-nowrap text-amber-100 ${
-          isSelected ? "flex" : "invisible"
+          isSelected
+            ? "flex [text-shadow:_0_1px_30px_rgb(246_255_0_/_90%)] "
+            : "invisible"
         }`}
       >
         <h2>{text}</h2>
@@ -29,7 +31,7 @@ const NavigationButton: React.FC<{
           }`}
         />
       </div>
-      <div className="justify-start">
+      <div className="justify-start ">
         <h2>{`${index}.`}</h2>
       </div>
     </div>
