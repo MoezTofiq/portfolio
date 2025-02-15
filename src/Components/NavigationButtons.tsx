@@ -28,23 +28,23 @@ const NavigationButtons = () => {
           console.log("home");
           break;
         case 2:
-          navigate("/about_me");
+          navigate("about_me");
           console.log("about me");
           break;
         case 3:
-          navigate("/personal_projects");
+          navigate("personal_projects");
           console.log("personal projects");
           break;
         case 4:
-          navigate("/work_experience");
+          navigate("work_experience");
           console.log("work experience");
           break;
         case 5:
-          navigate("/credits");
+          navigate("credits");
           console.log("credits");
           break;
         case 6:
-          navigate("/contact_me");
+          navigate("contact_me");
           console.log("contact me");
           break;
         default:
