@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import LightCircle from "./LightCircle";
 
 interface props {
@@ -6,6 +6,7 @@ interface props {
   middleSideLightNumber: number;
   inputText: string[];
   rotationAngle: number;
+  image?: ReactElement;
 }
 
 const LightsBoard: React.FC<props> = ({
@@ -13,6 +14,7 @@ const LightsBoard: React.FC<props> = ({
   middleSideLightNumber,
   inputText,
   rotationAngle,
+  image,
 }) => {
   const [activeLight, setActiveLight] = useState(0);
   const totalLights = topBottomLightNumber * 2 + middleSideLightNumber * 2;
@@ -59,6 +61,7 @@ const LightsBoard: React.FC<props> = ({
               {inputText.map((line: string) => (
                 <p>{line}</p>
               ))}
+              {image}
             </div>
           </div>
         </div>

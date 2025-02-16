@@ -1,20 +1,24 @@
 import aboutMe from "../../assets/AboutMe.svg";
+import LightsBoard from "../../Components/Name";
 
 const AboutMe = () => {
   return (
-    <div className="z-10 flex flex-col md:flex-row justify-center items-start p-8 gap-10">
-      <div className="md:w-1/3 flex flex-col justify-center items-center">
-        <h1 className="text-4xl md:text-5xl font-sans font-extrabold text-amber-900 bg-amber-100 p-4 rounded-br-4xl rounded-tl-4xl shadow-[0_0_8px_4px_rgba(255,191,71,0.4),0_0_8px_6px_rgba(255,191,71,0.6)]">
-          About Me
-        </h1>
+    <div className="z-10 flex flex-col md:flex-row justify-center items-center p-8 gap-10">
+      <div className="relative md:w-1/3 flex flex-col justify-center items-center">
         <img
           src={aboutMe}
           alt="About Me"
           className="mt-4 w-40 md:w-4xl filter drop-shadow-[0_0_10px_rgba(255,191,71,0.8)] brightness-110"
         />
+        <h1
+          // style={{ transform: `rotate(${-15}deg)` }}
+          className="absolute text-4xl md:text-5xl font-sans font-extrabold text-amber-900 bg-amber-100 p-4 md:mb-10 rounded-br-4xl rounded-tl-4xl shadow-[0_0_8px_4px_rgba(255,191,71,0.4),0_0_8px_6px_rgba(255,191,71,0.6)]"
+        >
+          About Me
+        </h1>
       </div>
 
-      <div className="md:w-2/3 space-y-4 text-lg font-mono text-gray-900 bg-amber-100 rounded-bl-4xl rounded-tr-4xl p-4 shadow-[0_0_8px_4px_rgba(255,191,71,0.4),0_0_8px_6px_rgba(255,191,71,0.6)]">
+      <div className="md:w-2/3 space-y-4 justify-center items-center text-lg font-mono text-gray-900 bg-amber-100 rounded-bl-4xl rounded-tr-4xl p-4 shadow-[0_0_8px_4px_rgba(255,191,71,0.4),0_0_8px_6px_rgba(255,191,71,0.6)]">
         <p>
           I’m a <span className="font-bold">Full Stack Software Engineer</span>{" "}
           with a passion for building high-quality, scalable applications. I
