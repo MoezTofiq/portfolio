@@ -11,11 +11,13 @@ import BackgroundSky from "./Components/backgroundSky.tsx";
 import Home from "./Pages/Home/Home.tsx";
 import NavigationButtons from "./Components/NavigationButtons.tsx";
 import AboutMe from "./Pages/AboutMe/AboutMe.tsx";
+import ShootingStarTrail from "./Components/ShootingStarTrail.tsx";
 
 const Layout = () => {
   return (
     <div>
       <BackgroundSky />
+      <ShootingStarTrail />
       <div className="flex justify-center items-center flex-col  z-10">
         <NavigationButtons />
       </div>
