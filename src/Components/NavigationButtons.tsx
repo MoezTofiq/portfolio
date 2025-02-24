@@ -32,12 +32,12 @@ const NavigationButtons = () => {
           console.log("about me");
           break;
         case 3:
-          navigate("personal_projects");
-          console.log("personal projects");
+          navigate("work_experience");
+          console.log("work_experience");
           break;
         case 4:
-          navigate("work_experience");
-          console.log("work experience");
+          navigate("personal_projects");
+          console.log("personal_projects");
           break;
         case 5:
           navigate("credits");

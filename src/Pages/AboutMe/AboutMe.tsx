@@ -1,5 +1,4 @@
 import aboutMe from "../../assets/AboutMe.svg";
-import LightsBoard from "../../Components/Name";
 
 const AboutMe = () => {
   return (
