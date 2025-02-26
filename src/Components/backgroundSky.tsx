@@ -11,7 +11,7 @@ const BackgroundSky: React.FC = () => {
   const [stars, setStars] = useState<Star[]>([]);
 
   useEffect(() => {
-    const numStars = 150;
+    const numStars = 350;
     const newStars: Star[] = [];
 
     for (let i = 0; i < numStars; i++) {
@@ -27,12 +27,12 @@ const BackgroundSky: React.FC = () => {
   }, []);
 
   return (
-    <div className="absolute top-0 bottom-0 right-0 left-0 z-0 blur-xs">
-      <div className="relative h-screen w-full bg-[#1D1522] overflow-hidden">
+    <div className="fixed top-0 right-0 left-0 bottom-0 z-0 bg-[#1D1522] blur-xs">
+      <div className="relative w-full min-h-screen h-full bg-[#1D1522] overflow-hidden">
         {stars.map((star, index) => (
           <div
             key={`${index}_star`}
-            className="absolute rounded-full bg-amber-100 shadow-lg animate-pulse "
+            className="fixed rounded-full bg-amber-100 shadow-lg animate-pulse "
             style={{
               width: `${star.size}px`,
               height: `${star.size}px`,
