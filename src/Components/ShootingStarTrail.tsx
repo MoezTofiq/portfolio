@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 
 const ShootingStarTrail: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [trail, setTrail] = useState<{ x: number; y: number; id: string }[]>([]);
+  const [trail, setTrail] = useState<{ x: number; y: number; id: string }[]>(
+    []
+  );
 
   // Handle mouse movement
   useEffect(() => {
@@ -13,7 +15,11 @@ const ShootingStarTrail: React.FC = () => {
       // Add a new trail point
       setTrail((prevTrail) => [
         ...prevTrail,
-        { x: clientX, y: clientY, id: Math.random().toString(36).substring(2, 9) },
+        {
+          x: clientX,
+          y: clientY,
+          id: Math.random().toString(36).substring(2, 9),
+        },
       ]);
 
       // Limit trail length
@@ -27,7 +33,7 @@ const ShootingStarTrail: React.FC = () => {
   }, [trail]);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
+    <div className="fixed top-0 left-0 w-full h-full pointer-events-none blur-xl">
       {trail.map((point) => (
         <div
           key={point.id}
