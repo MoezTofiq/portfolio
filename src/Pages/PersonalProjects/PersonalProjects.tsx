@@ -11,67 +11,50 @@ const ProjectComponent: React.FC<{ projects: ProjectProps[] }> = ({
   projects,
 }) => {
   return (
-    <>
+    <div className="w-full max-w-3xl">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="bg-white shadow sm:rounded-lg sm:overflow-hidden m-3 p-2"
+          className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-5 p-6 border border-white/20 text-white transition-all duration-300 hover:bg-white/20 hover:scale-105"
         >
-          <div className="px-4 sm:px-0">
-            <h3 className="text-base/7 font-semibold text-gray-900">
-              {project.title}
-            </h3>
-            <p className="mt-1 max-w-2xl text-sm/6 text-gray-500">
-              {project.description}
-            </p>
-          </div>
+          <h3 className="text-xl font-semibold tracking-wide">
+            {project.title}
+          </h3>
+          <p className="mt-2 text-gray-300 text-sm">{project.description}</p>
 
           {/* Technology Used */}
-          <div className="mt-6 border-t border-gray-100">
-            <dl className="divide-y divide-gray-100">
-              <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt className="text-sm/6 font-medium text-gray-900">
-                  Technology used
-                </dt>
-                <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-                  <ul className="list-disc pl-5">
-                    {project.technology.map((tech, techIndex) => (
-                      <li key={techIndex}>
-                        <a className="textUnderLine transition-all duration-300">
-                          {tech}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </dd>
-              </div>
-            </dl>
+          <div className="mt-4 border-t border-white/20 pt-4">
+            <h4 className="text-sm font-medium text-gray-200 uppercase">
+              Technology Used
+            </h4>
+            <ul className="list-disc pl-5 text-gray-300">
+              {project.technology.map((tech, techIndex) => (
+                <li key={techIndex} className="hover:text-blue-300 transition">
+                  {tech}
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Features */}
-          <div className="mt-6 border-t border-gray-100">
-            <dl className="divide-y divide-gray-100">
-              <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt className="text-sm/6 font-medium text-gray-900">
-                  Features
-                </dt>
-                <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-                  <ul className="list-disc pl-5">
-                    {project.features.map((feature, featureIndex) => (
-                      <li key={featureIndex}>
-                        <a className="textUnderLine transition-all duration-300">
-                          {feature}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </dd>
-              </div>
-            </dl>
+          <div className="mt-4 border-t border-white/20 pt-4">
+            <h4 className="text-sm font-medium text-gray-200 uppercase">
+              Features
+            </h4>
+            <ul className="list-disc pl-5 text-gray-300">
+              {project.features.map((feature, featureIndex) => (
+                <li
+                  key={featureIndex}
+                  className="hover:text-blue-300 transition"
+                >
+                  {feature}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
@@ -93,16 +76,19 @@ const PersonalProjects = () => {
 
   return (
     <RoutePageAnimation>
-      <div className="flex flex-col items-center justify-start w-full h-full z-10">
-        <div className="bg-white shadow sm:rounded-lg sm:overflow-hidden m-3 p-2">
-          <div className="px-4 sm:px-0">
-            <h3 className="text-base/7 font-semibold text-gray-900">
-              Personal Projects
-            </h3>
-          </div>
+      <div className="relative flex flex-col items-center justify-start w-full h-full z-10 text-white">
+        {/* Section Header */}
+        <div className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-6 p-6 border border-white/20 text-white max-w-3xl text-center">
+          <h3 className="text-3xl font-bold tracking-wide">
+            Personal Projects
+          </h3>
+          <p className="text-gray-300 mt-2 text-sm">
+            A collection of personal projects I’ve worked on, blending
+            creativity with technology.
+          </p>
         </div>
 
-        {/* Pass the projects array */}
+        {/* Project List */}
         <ProjectComponent projects={projects} />
       </div>
     </RoutePageAnimation>

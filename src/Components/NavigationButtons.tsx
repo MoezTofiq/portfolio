@@ -39,7 +39,7 @@ const NavigationButtons = () => {
   }, [selected]);
 
   return (
-    <div className="z-10 fixed bottom-0 right-5">
+    <div className="z-50 fixed bottom-0 right-5">
       <div className="flex flex-row justify-center items-center gap-5 z-10 transition-all duration-300 m-14 bg-[#1D1522]/70 backdrop-blur-md p-1 rounded-xl shadow-lg">
         {buttons.map((button, index) => (
           <NavigationButton
