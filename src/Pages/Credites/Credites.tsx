@@ -1,114 +1,92 @@
 import RoutePageAnimation from "../../Components/animations/RoutePageAnimation";
 
+const CreditSection = ({
+  title,
+  items,
+}: {
+  title: string;
+  items: { name: string; link: string }[];
+}) => {
+  return (
+    <div className="mt-6 border-t border-white/20">
+      <dl className="divide-y divide-white/20">
+        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt className="text-sm font-medium text-white">{title}</dt>
+          <dd className="mt-1 text-sm text-gray-300 sm:col-span-2 sm:mt-0 space-y-2">
+            {items.map((item, index) => (
+              <li
+                key={index}
+                className="hover:text-blue-300 transition-all duration-300 cursor-pointer"
+                onClick={() => window.open(item.link, "_blank")}
+              >
+                {item.name}
+              </li>
+            ))}
+          </dd>
+        </div>
+      </dl>
+    </div>
+  );
+};
+
 const Credits = () => {
   return (
     <RoutePageAnimation>
-      <div className="flex flex-col items-center justify-start w-full h-full text-white">
-        <div className="bg-white/10 backdrop-blur-lg shadow-lg sm:rounded-lg sm:overflow-hidden m-5 p-6 w-full max-w-3xl border border-white/20">
-          <div className="px-4 sm:px-0">
-            <h3 className="text-lg font-semibold text-white">
-              Website Technology & Inspirations
-            </h3>
-            <p className="mt-2 text-sm text-gray-300">
-              A heartfelt appreciation for the technologies and inspirations
-              that shaped this portfolio.
-            </p>
-          </div>
+      <div className="relative flex flex-col items-center justify-start w-full min-h-screen z-10 text-white p-4">
+        {/* Header Card */}
+        <div className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-4 sm:m-6 p-6 border border-white/20 text-white w-full max-w-3xl text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold tracking-wide">
+            Website Technology & Inspirations
+          </h3>
+          <p className="text-gray-300 mt-2 text-sm sm:text-base">
+            A heartfelt appreciation for the technologies and inspirations that
+            shaped this portfolio.
+          </p>
+        </div>
 
-          {/* Technologies Used */}
-          <div className="mt-6 border-t border-white/20">
-            <dl className="divide-y divide-white/20">
-              <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt className="text-sm font-medium text-white">Technology</dt>
-                <dd className="mt-1 text-sm text-gray-300 sm:col-span-2 sm:mt-0 space-y-2">
-                  <li>
-                    <a
-                      href="https://react.dev/"
-                      className="text-blue-300 hover:text-blue-400 transition-all duration-300"
-                    >
-                      React
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://reactrouter.com/6.29.0"
-                      className="text-blue-300 hover:text-blue-400 transition-all duration-300"
-                    >
-                      React Router Dom V6.29.0
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://tailwindcss.com/"
-                      className="text-blue-300 hover:text-blue-400 transition-all duration-300"
-                    >
-                      Tailwind CSS V4.0
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://motion.dev/"
-                      className="text-blue-300 hover:text-blue-400 transition-all duration-300"
-                    >
-                      Motion (for animations)
-                    </a>
-                  </li>
-                </dd>
-              </div>
-            </dl>
-          </div>
+        {/* Content Card (Middle Section) */}
+        <div className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-4 sm:m-6 p-6 border border-white/20 text-white w-full max-w-3xl">
+          <CreditSection
+            title="Technology Used"
+            items={[
+              { name: "React", link: "https://react.dev/" },
+              {
+                name: "React Router Dom V6.29.0",
+                link: "https://reactrouter.com/6.29.0",
+              },
+              { name: "Tailwind CSS V4.0", link: "https://tailwindcss.com/" },
+              { name: "Motion (for animations)", link: "https://motion.dev/" },
+            ]}
+          />
 
-          {/* Design Inspirations */}
-          <div className="mt-6 border-t border-white/20">
-            <dl className="divide-y divide-white/20">
-              <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt className="text-sm font-medium text-white">
-                  Design Inspirations
-                </dt>
-                <dd className="mt-1 text-sm text-gray-300 sm:col-span-2 sm:mt-0 space-y-2">
-                  <li>
-                    <a
-                      href="https://www.wehackutd.com/"
-                      className="text-blue-300 hover:text-blue-400 transition-all duration-300"
-                    >
-                      WeHack Landing Page (color palette & overall aesthetic)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.microsoft.com/en-us/edge/welcome"
-                      className="text-blue-300 hover:text-blue-400 transition-all duration-300"
-                    >
-                      Microsoft Edge Welcome Page (animation & user experience)
-                    </a>
-                  </li>
-                </dd>
-              </div>
-            </dl>
-          </div>
+          <CreditSection
+            title="Design Inspirations"
+            items={[
+              {
+                name: "WeHack Landing Page (color palette & aesthetic)",
+                link: "https://www.wehackutd.com/",
+              },
+              {
+                name: "Microsoft Edge Welcome Page (animation & UX)",
+                link: "https://www.microsoft.com/en-us/edge/welcome",
+              },
+            ]}
+          />
 
-          {/* Assets Used */}
-          <div className="mt-6 border-t border-white/20">
-            <dl className="divide-y divide-white/20">
-              <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt className="text-sm font-medium text-white">
-                  Assets & Icons
-                </dt>
-                <dd className="mt-1 text-sm text-gray-300 sm:col-span-2 sm:mt-0 space-y-2">
-                  <li>
-                    <a
-                      href="https://www.onlinewebfonts.com/icon/422506"
-                      className="text-blue-300 hover:text-blue-400 transition-all duration-300"
-                    >
-                      About Me Icon
-                    </a>
-                  </li>
-                </dd>
-              </div>
-            </dl>
-          </div>
+          <CreditSection
+            title="Assets & Icons"
+            items={[
+              {
+                name: "About Me Icon",
+                link: "https://www.onlinewebfonts.com/icon/422506",
+              },
+            ]}
+          />
+        </div>
 
-          <p className="text-sm text-center text-gray-400 mt-6">
+        {/* Thank You Card */}
+        <div className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-4 sm:m-6 p-6 border border-white/20 text-white w-full max-w-3xl text-center">
+          <p className="text-sm sm:text-base text-gray-300">
             Special thanks to all the creators and communities who contribute to
             open-source projects, inspiring countless developers, including
             myself. 💙
