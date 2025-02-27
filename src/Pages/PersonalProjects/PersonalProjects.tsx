@@ -5,17 +5,38 @@ interface ProjectProps {
   description: string;
   technology: string[];
   features: string[];
+  links: {
+    chrome?: string;
+    firefox?: string;
+    edge?: string;
+  };
 }
+
+const getBrowser = () => {
+  if (navigator.userAgent.includes("Firefox")) return "firefox";
+  if (navigator.userAgent.includes("Edg")) return "edge";
+  if (navigator.userAgent.includes("Chrome")) return "chrome";
+  return null;
+};
 
 const ProjectComponent: React.FC<{ projects: ProjectProps[] }> = ({
   projects,
 }) => {
+  const browser = getBrowser();
+
+  const handleProjectClick = (links: ProjectProps["links"]) => {
+    const url = browser ? links[browser] : null;
+    if (url) window.open(url, "_blank");
+    else alert("No store link available for your browser.");
+  };
+
   return (
     <div className="w-full max-w-3xl">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-5 p-6 border border-white/20 text-white transition-all duration-300 hover:bg-white/20 hover:scale-105"
+          className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-5 p-6 border border-white/20 text-white transition-all duration-300 hover:bg-white/20 hover:scale-105 cursor-pointer"
+          onClick={() => handleProjectClick(project.links)}
         >
           <h3 className="text-xl font-semibold tracking-wide">
             {project.title}
@@ -65,12 +86,22 @@ const PersonalProjects = () => {
       description: "A cross-browser content-blocking tool for social media.",
       technology: ["TypeScript", "React", "Firebase"],
       features: ["Content filtering", "Cloud sync"],
+      links: {
+        chrome: "https://example.com/",
+        firefox: "https://example.com/",
+        edge: "https://example.com/",
+      },
     },
     {
       title: "Candle-Light",
       description: "A cross-browser customizable blue light filter extension.",
       technology: ["JavaScript", "React", "CSS"],
       features: ["Customizable color", "Adjustable filter strength"],
+      links: {
+        chrome: "https://example.com/",
+        firefox: "https://example.com/",
+        edge: "https://example.com/",
+      },
     },
   ];
 
@@ -83,7 +114,7 @@ const PersonalProjects = () => {
             Personal Projects
           </h3>
           <p className="text-gray-300 mt-2 text-sm">
-            A collection of personal projects I’ve worked on, blending
+            A collection of personal projects I’ve worked on, trying to blend
             creativity with technology.
           </p>
         </div>
