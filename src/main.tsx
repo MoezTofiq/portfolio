@@ -19,27 +19,12 @@ import AboutMe from "./Pages/AboutMe/AboutMe.tsx";
 import ShootingStarTrail from "./Components/ShootingStarTrail.tsx";
 import { AnimatePresence, motion } from "motion/react";
 
-const pageVariants = {
-  initial: { opacity: 0, x: -50 },
-  animate: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-  exit: { opacity: 0, x: 50, transition: { duration: 0.3 } },
-};
-
 const AnimatedOutlet = () => {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        key={location.pathname} // Ensure animation triggers on route change
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        variants={pageVariants}
-        className="absolute w-full"
-      >
-        <Outlet />
-      </motion.div>
+      <Outlet />
     </AnimatePresence>
   );
 };

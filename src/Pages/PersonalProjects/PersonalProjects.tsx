@@ -1,3 +1,5 @@
+import RoutePageAnimation from "../../Components/animations/RoutePageAnimation";
+
 interface ProjectProps {
   title: string;
   description: string;
@@ -114,18 +116,20 @@ const PersonalProjects = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-start w-full h-full z-10">
-      <div className="bg-white shadow sm:rounded-lg sm:overflow-hidden m-3 p-2">
-        <div className="px-4 sm:px-0">
-          <h3 className="text-base/7 font-semibold text-gray-900">
-            Personal Projects
-          </h3>
+    <RoutePageAnimation>
+      <div className="flex flex-col items-center justify-start w-full h-full z-10">
+        <div className="bg-white shadow sm:rounded-lg sm:overflow-hidden m-3 p-2">
+          <div className="px-4 sm:px-0">
+            <h3 className="text-base/7 font-semibold text-gray-900">
+              Personal Projects
+            </h3>
+          </div>
         </div>
-      </div>
 
-      {/* Pass the projects array */}
-      <ProjectComponent projects={projects} />
-    </div>
+        {/* Pass the projects array */}
+        <ProjectComponent projects={projects} />
+      </div>
+    </RoutePageAnimation>
   );
 };
 

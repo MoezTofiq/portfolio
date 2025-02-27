@@ -1,5 +1,11 @@
+import RoutePageAnimation from "../../Components/animations/RoutePageAnimation";
+
 const WorkExperience = () => {
-  return <div>WorkExperience</div>;
+  return (
+    <RoutePageAnimation>
+      <div>WorkExperience</div>
+    </RoutePageAnimation>
+  );
 };
 
 export default WorkExperience;

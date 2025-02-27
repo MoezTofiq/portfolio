@@ -1,11 +1,15 @@
+import RoutePageAnimation from "../../Components/animations/RoutePageAnimation";
+
 const Contact = () => {
   return (
-    <div>
-      Contact{" "}
-      <div className="bg-red-400">
-        Socials <div>github</div> <div>linkedin</div>
+    <RoutePageAnimation>
+      <div>
+        Contact{" "}
+        <div className="bg-red-400">
+          Socials <div>github</div> <div>linkedin</div>
+        </div>
       </div>
-    </div>
+    </RoutePageAnimation>
   );
 };
 
