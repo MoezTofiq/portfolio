@@ -41,6 +41,14 @@ const Credits = () => {
                     Tailwind V4.0
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://motion.dev/"
+                    className=" textUnderLine transition-all duration-300"
+                  >
+                    Motion (for animations)
+                  </a>
+                </li>
               </dd>
             </div>
           </dl>
