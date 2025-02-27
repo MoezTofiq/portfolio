@@ -85,7 +85,7 @@ const PersonalProjects = () => {
     },
     {
       title: "Candle-Light",
-      description: "A cross-browser customizable blue light filter extension.",
+      description: "A cross-browser customizable blue light filter extensi on.",
       technology: ["JavaScript", "React", "CSS"],
       features: ["Customizable color", "Adjustable filter strength"],
     },
