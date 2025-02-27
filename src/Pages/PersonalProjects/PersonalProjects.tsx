@@ -78,40 +78,16 @@ const ProjectComponent: React.FC<{ projects: ProjectProps[] }> = ({
 const PersonalProjects = () => {
   const projects: ProjectProps[] = [
     {
+      title: "Enough",
+      description: "A cross-browser content-blocking tool for social media.",
+      technology: ["TypeScript", "React", "Firebase"],
+      features: ["Content filtering", "Cloud sync"],
+    },
+    {
       title: "Candle-Light",
       description: "A cross-browser customizable blue light filter extension.",
       technology: ["JavaScript", "React", "CSS"],
       features: ["Customizable color", "Adjustable filter strength"],
-    },
-    {
-      title: "Enough",
-      description: "A cross-browser content-blocking tool for social media.",
-      technology: ["TypeScript", "React", "Firebase"],
-      features: ["Content filtering", "Cloud sync"],
-    },
-    {
-      title: "Enough",
-      description: "A cross-browser content-blocking tool for social media.",
-      technology: ["TypeScript", "React", "Firebase"],
-      features: ["Content filtering", "Cloud sync"],
-    },
-    {
-      title: "Enough",
-      description: "A cross-browser content-blocking tool for social media.",
-      technology: ["TypeScript", "React", "Firebase"],
-      features: ["Content filtering", "Cloud sync"],
-    },
-    {
-      title: "Enough",
-      description: "A cross-browser content-blocking tool for social media.",
-      technology: ["TypeScript", "React", "Firebase"],
-      features: ["Content filtering", "Cloud sync"],
-    },
-    {
-      title: "Enough",
-      description: "A cross-browser content-blocking tool for social media.",
-      technology: ["TypeScript", "React", "Firebase"],
-      features: ["Content filtering", "Cloud sync"],
     },
   ];
 

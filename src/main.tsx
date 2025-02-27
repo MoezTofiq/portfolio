@@ -1,12 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import {
-  createBrowserRouter,
-  Outlet,
-  RouterProvider,
-  useLocation,
-} from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage.tsx";
 import Contact from "./Pages/Contact/Contact.tsx";
 import Credits from "./Pages/Credites/Credites.tsx";
@@ -17,11 +12,9 @@ import Home from "./Pages/Home/Home.tsx";
 import NavigationButtons from "./Components/NavigationButtons.tsx";
 import AboutMe from "./Pages/AboutMe/AboutMe.tsx";
 import ShootingStarTrail from "./Components/ShootingStarTrail.tsx";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence } from "motion/react";
 
 const AnimatedOutlet = () => {
-  const location = useLocation();
-
   return (
     <AnimatePresence mode="wait">
       <Outlet />
@@ -39,7 +32,6 @@ const Layout = () => {
       </div>
       <div className="relative">
         <AnimatedOutlet />
-        {/* <Outlet /> */}
       </div>
     </div>
   );
