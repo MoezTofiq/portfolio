@@ -41,25 +41,50 @@ const Home = () => {
         {/* Subheading */}
         <div
           id="sub_heading"
-          className="z-10 text-xl md:text-2xl flex flex-row bg-amber-100 p-2 md:p-4 rounded-br-4xl rounded-tl-4xl shadow-[0_0_8px_4px_rgba(255,191,71,0.4),0_0_8px_6px_rgba(255,191,71,0.6)] mt-4 md:mt-6"
+          className="z-10 text-xl md:text-2xl flex flex-row bg-amber-100 p-2 md:p-4 rounded-br-4xl 
+                    rounded-tl-4xl shadow-[0_0_8px_4px_rgba(255,191,71,0.4),0_0_8px_6px_rgba(255,191,71,0.6)] mt-4 md:mt-6"
           style={{ transform: `rotate(${-10}deg)` }}
         >
-          <p>Full Stack Web & App Developer </p>
+          <p>Full Stack Web & App Developer</p>
         </div>
 
         {/* Stats Section */}
-        <div className="flex flex-col md:flex-row justify-center items-center pt-10 gap-6 md:gap-10 w-full">
+        <div className="flex flex-wrap justify-center items-center pt-10 gap-6 md:gap-10 w-full">
           <HeadingCircles
             innerHeading="1.5"
-            outerText="Total Experience"
+            outerText="Total Experience (Years)"
             size={32}
             duration={4000}
           />
           <HeadingCircles
-            innerHeading="1"
-            outerText="Total Projects Worked On"
+            innerHeading="10+"
+            outerText="Projects Completed"
             size={28}
             duration={4500}
+          />
+          <HeadingCircles
+            innerHeading="5+"
+            outerText="Technologies Mastered"
+            size={30}
+            duration={4000}
+          />
+          <HeadingCircles
+            innerHeading="3"
+            outerText="Open Source Contributions"
+            size={26}
+            duration={3500}
+          />
+          <HeadingCircles
+            innerHeading="100%"
+            outerText="Passion for Coding"
+            size={32}
+            duration={5000}
+          />
+          <HeadingCircles
+            innerHeading="100%"
+            outerText="Passion for Solving Problems"
+            size={32}
+            duration={5000}
           />
         </div>
       </div>
