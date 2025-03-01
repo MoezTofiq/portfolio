@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import NavigationButton from "./NavigationButton";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react"; // Icons for menu toggle
 
 const buttons = [
   { name: "Home", path: "/" },
@@ -14,6 +15,7 @@ const buttons = [
 const NavigationButtons = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false); // Hamburger menu toggle
 
   // Find the index of the current path to set as initial selected value
   const getInitialIndex = () => {
@@ -39,19 +41,54 @@ const NavigationButtons = () => {
   }, [selected]);
 
   return (
-    <div className="z-50 fixed bottom-0 right-5">
-      <div className="flex flex-row justify-center items-center gap-5 z-10 transition-all duration-300 m-14 bg-[#1D1522]/70 backdrop-blur-md p-1 rounded-xl shadow-lg">
-        {buttons.map((button, index) => (
-          <NavigationButton
-            key={index + 1}
-            text={button.name}
-            index={index + 1}
-            isSelected={selected === index + 1}
-            setSelected={setSelected}
-          />
-        ))}
+    <>
+      {/* Mobile & Tablet Navigation Bar (Visible on md and below) */}
+      <div className="lg:hidden fixed top-0 left-0 w-full bg-[#1D1522]/70 backdrop-blur-md p-3 flex justify-between items-center z-50 shadow-md">
+        <h2 className="text-white text-xl">Menu</h2>
+        <button onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? (
+            <X className="text-white" size={30} />
+          ) : (
+            <Menu className="text-white" size={30} />
+          )}
+        </button>
       </div>
-    </div>
+
+      {/* Mobile & Tablet Dropdown Menu */}
+      {isOpen && (
+        <div className="lg:hidden fixed top-[50px] left-0 w-full bg-[#1D1522]/90 backdrop-blur-lg p-4 flex flex-col gap-3 shadow-lg z-50">
+          {buttons.map((button, index) => (
+            <button
+              key={index + 1}
+              className={`text-lg p-2 text-white ${
+                selected === index + 1 ? "text-amber-100 font-bold" : ""
+              }`}
+              onClick={() => {
+                setSelected(index + 1);
+                setIsOpen(false);
+              }}
+            >
+              {button.name}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Desktop Navigation (Only visible on lg and larger screens) */}
+      <div className="hidden lg:flex z-50 fixed bottom-0 right-5">
+        <div className="flex flex-row justify-center items-center gap-5 z-10 transition-all duration-300 m-14 bg-[#1D1522]/70 backdrop-blur-md p-1 rounded-xl shadow-lg">
+          {buttons.map((button, index) => (
+            <NavigationButton
+              key={index + 1}
+              text={button.name}
+              index={index + 1}
+              isSelected={selected === index + 1}
+              setSelected={setSelected}
+            />
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
