@@ -30,7 +30,7 @@ const Layout = () => {
       <div className="flex justify-center items-center flex-col  z-10">
         <NavigationButtons />
       </div>
-      <div className="relative">
+      <div className="relative pt-14 md:pt-20">
         <AnimatedOutlet />
       </div>
     </div>
