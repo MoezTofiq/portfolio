@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const ShootingStarTrail: React.FC = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [, setMousePosition] = useState({ x: 0, y: 0 });
   const [trail, setTrail] = useState<{ x: number; y: number; id: string }[]>(
     []
   );
