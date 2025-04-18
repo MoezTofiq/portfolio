@@ -76,7 +76,7 @@ const NavigationButtons = () => {
 
       {/* Desktop Navigation (Only visible on lg and larger screens) */}
       <div className="hidden lg:flex z-50 fixed right-5 top-1/2 -translate-y-1/2">
-        <div className="flex flex-col items-center bg-[#1D1522]/70 backdrop-blur-md px-6 py-4 rounded-xl shadow-lg transition-all duration-300 gap-1">
+        <div className="flex flex-col items-center bg-[#1D1522]/70 backdrop-blur-md px-1 py-1.5 rounded-xl shadow-lg transition-all duration-300">
           {buttons.map((button, index) => (
             <NavigationButton
               key={index + 1}
