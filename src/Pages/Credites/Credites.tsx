@@ -32,7 +32,7 @@ const CreditSection = ({
 const Credits = () => {
   return (
     <RoutePageAnimation>
-      <div className="relative flex flex-col items-center justify-start w-full min-h-screen z-10 text-white p-4">
+      <div className="pt-20 relative flex flex-col items-center justify-start w-full min-h-screen z-10 text-white p-4">
         {/* Header Card */}
         <div className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-4 sm:m-6 p-6 border border-white/20 text-white w-full max-w-3xl text-center">
           <h3 className="text-2xl sm:text-3xl font-bold tracking-wide">

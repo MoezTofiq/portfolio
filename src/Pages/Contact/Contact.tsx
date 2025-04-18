@@ -16,7 +16,7 @@ const Contact = () => {
 
   return (
     <RoutePageAnimation>
-      <div className="flex flex-col items-center justify-start w-full h-full text-white">
+      <div className="pt-20 flex flex-col items-center justify-start w-full h-full text-white">
         {/* Contact Card */}
         <div className="bg-white/10 backdrop-blur-lg shadow-lg sm:rounded-2xl sm:overflow-hidden m-5 p-8 w-full max-w-3xl border border-white/20 text-center">
           <h3 className="text-3xl font-bold tracking-wide">Get In Touch</h3>

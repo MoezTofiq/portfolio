@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <RoutePageAnimation>
-      <div className="flex flex-col items-center justify-center px-4">
+      <div className=" pt-20 flex flex-col items-center justify-center px-4">
         {/* Name Board */}
         {isMobile ? (
           <LightsBoardMobile

@@ -107,7 +107,7 @@ const PersonalProjects = () => {
 
   return (
     <RoutePageAnimation>
-      <div className="relative flex flex-col items-center justify-start w-full h-full z-10 text-white">
+      <div className="pt-20 relative flex flex-col items-center justify-start w-full h-full z-10 text-white">
         {/* Section Header */}
         <div className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-6 p-6 border border-white/20 text-white max-w-3xl text-center">
           <h3 className="text-3xl font-bold tracking-wide">

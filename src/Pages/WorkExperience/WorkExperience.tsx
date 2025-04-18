@@ -84,7 +84,7 @@ const jobs: JobProps[] = [
 const WorkExperience = () => {
   return (
     <RoutePageAnimation>
-      <div className="min-h-screen bg-[#FEF3C6] px-6 py-12">
+      <div className="pt-20 min-h-screen bg-[#FEF3C6] px-6 py-12">
         <h2 className="text-4xl font-bold text-gray-900 text-center mb-8">
           Work Experience
         </h2>
