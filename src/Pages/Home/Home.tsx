@@ -24,7 +24,7 @@ const Home = () => {
         />
         <meta
           name="keywords"
-          content="developer, portfolio, software engineer, projects, skills"
+          content="developer, portfolio, software engineer, projects, skills, muhammad, moeez, tofiq, web developer, full stack developer"
         />
         <meta property="og:title" content="Home | My Developer Portfolio" />
         <meta
@@ -37,8 +37,10 @@ const Home = () => {
           content="https://moeeztofiq.com/assets/images/portfolio.png"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Muhammad Moeez" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          property="og:site_name"
+          content="Muhammad Moeez | personal portfolio"
+        />
         {/* Name Board */}
         {isMobile ? (
           <LightsBoardMobile
