@@ -17,6 +17,36 @@ const Contact = () => {
   return (
     <RoutePageAnimation>
       <div className="pt-20 flex flex-col items-center justify-start w-full h-full text-white">
+        <title>Contact Me | Muhammad Moeez Portfolio</title>
+        <meta
+          name="description"
+          content="Get in touch for collaborations, freelance work, or just to say hi!"
+        />
+        <meta
+          name="keywords"
+          content="contact developer, hire me, connect, developer email"
+        />
+        <meta
+          property="og:title"
+          content="Contact Me | My Developer Portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Reach out to me for opportunities, feedback, or inquiries."
+        />
+        <meta
+          name="twitter:title"
+          content="Contact Me | My Developer Portfolio"
+        />
+        <meta
+          name="twitter:description"
+          content="Reach out to me for opportunities, feedback, or inquiries."
+        />
+
+        <meta name="twitter:site" content="@moeeztofiq" />
+        <meta name="twitter:creator" content="@moeeztofiq" />
+        <meta name="twitter:card" content="summary_large_image" />
+
         {/* Contact Card */}
         <div className="bg-white/10 backdrop-blur-lg shadow-lg sm:rounded-2xl sm:overflow-hidden m-5 p-8 w-full max-w-3xl border border-white/20 text-center">
           <h3 className="text-3xl font-bold tracking-wide">Get In Touch</h3>

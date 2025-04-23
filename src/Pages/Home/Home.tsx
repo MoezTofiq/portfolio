@@ -17,6 +17,28 @@ const Home = () => {
   return (
     <RoutePageAnimation>
       <div className=" pt-20 flex flex-col items-center justify-center px-4">
+        <title>Muhammad Moeez | Portfolio</title>
+        <meta
+          name="description"
+          content="Welcome to my personal portfolio. Explore my journey, skills, and featured work."
+        />
+        <meta
+          name="keywords"
+          content="developer, portfolio, software engineer, projects, skills"
+        />
+        <meta property="og:title" content="Home | My Developer Portfolio" />
+        <meta
+          property="og:description"
+          content="Discover my work, personal projects, and experiences."
+        />
+        <meta property="og:url" content="https://moeeztofiq.com/" />
+        <meta
+          property="og:image"
+          content="https://moeeztofiq.com/assets/images/portfolio.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Muhammad Moeez" />
+        <meta name="twitter:card" content="summary_large_image" />
         {/* Name Board */}
         {isMobile ? (
           <LightsBoardMobile

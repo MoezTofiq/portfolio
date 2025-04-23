@@ -108,6 +108,28 @@ const PersonalProjects = () => {
   return (
     <RoutePageAnimation>
       <div className="pt-20 relative flex flex-col items-center justify-start w-full h-full z-10 text-white">
+        <title>Personal Projects | My Developer Portfolio</title>
+        <meta
+          name="description"
+          content="A showcase of my passion projects — browser extensions, mobile apps, and experiments."
+        />
+        <meta
+          name="keywords"
+          content="personal projects, side projects, extensions, apps, developer work"
+        />
+        <meta
+          property="og:title"
+          content="Personal Projects | My Developer Portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Explore the tools and software I’ve built in my free time."
+        />
+        <meta
+          property="og:url"
+          content="https://your-domain.com/personal_projects"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
         {/* Section Header */}
         <div className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-6 p-6 border border-white/20 text-white max-w-3xl text-center">
           <h3 className="text-3xl font-bold tracking-wide">

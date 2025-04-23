@@ -85,6 +85,28 @@ const WorkExperience = () => {
   return (
     <RoutePageAnimation>
       <div className="pt-20 min-h-screen bg-[#FEF3C6] px-6 py-12">
+        <title>Work Experience | My Developer Portfolio</title>
+        <meta
+          name="description"
+          content="An overview of my professional experience, roles, and contributions in tech."
+        />
+        <meta
+          name="keywords"
+          content="developer experience, job history, tech roles, full-stack"
+        />
+        <meta
+          property="og:title"
+          content="Work Experience | My Developer Portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Check out the companies I’ve worked at and what I did there."
+        />
+        <meta
+          property="og:url"
+          content="https://your-domain.com/work_experience"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
         <h2 className="text-4xl font-bold text-gray-900 text-center mb-8">
           Work Experience
         </h2>

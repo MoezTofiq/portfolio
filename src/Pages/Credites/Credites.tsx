@@ -33,6 +33,25 @@ const Credits = () => {
   return (
     <RoutePageAnimation>
       <div className="pt-20 relative flex flex-col items-center justify-start w-full min-h-screen z-10 text-white p-4">
+        <title>Website Credits | My Developer Portfolio</title>
+        <meta
+          name="description"
+          content="Acknowledgements for the tools, libraries, and creators who made this portfolio possible."
+        />
+        <meta
+          name="keywords"
+          content="credits, acknowledgements, open source, portfolio tools"
+        />
+        <meta
+          property="og:title"
+          content="Website Credits | My Developer Portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Shoutout to the resources and inspiration behind this site."
+        />
+        <meta property="og:url" content="https://your-domain.com/credits" />
+        <meta name="twitter:card" content="summary_large_image" />
         {/* Header Card */}
         <div className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-4 sm:m-6 p-6 border border-white/20 text-white w-full max-w-3xl text-center">
           <h3 className="text-2xl sm:text-3xl font-bold tracking-wide">

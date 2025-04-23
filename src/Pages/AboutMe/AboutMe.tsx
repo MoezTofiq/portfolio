@@ -5,6 +5,31 @@ const AboutMe = () => {
   return (
     <RoutePageAnimation>
       <div className=" pt-20 z-10 flex flex-col lg:flex-row justify-center items-center px-6 py-12 gap-10 max-w-6xl mx-auto">
+        <title>About Me | Muhammad Moeez Portfolio</title>
+        <meta
+          name="description"
+          content="Learn about my background, development journey, and passions beyond coding."
+        />
+        <meta
+          name="keywords"
+          content="developer bio, personal story, software journey, about me"
+        />
+        <meta property="og:title" content="About Me | My Developer Portfolio" />
+        <meta
+          property="og:description"
+          content="My background, skills, and what drives me as a developer."
+        />
+        <meta property="og:url" content="https://moeeztofiq.com/about_me" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Me | My Developer Portfolio"
+        />
+        <meta
+          name="twitter:description"
+          content="My background, skills, and what drives me as a developer."
+        />
+
         {/* Image & Centered Heading Section */}
         <div className="relative flex justify-center items-center w-full lg:w-1/3">
           <div className="relative w-40 sm:w-56 md:w-72 lg:w-80">
