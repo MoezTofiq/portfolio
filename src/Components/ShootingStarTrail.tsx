@@ -33,7 +33,7 @@ const ShootingStarTrail: React.FC = () => {
   }, [trail]);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full pointer-events-none blur-xl">
+    <div className="fixed top-0 left-0 w-full h-full pointer-events-none blur-lg">
       {trail.map((point) => (
         <div
           key={point.id}
