@@ -6,21 +6,116 @@ interface ProjectProps {
   technology: string[];
   features: string[];
   links: {
-    chrome?: string;
-    firefox?: string;
-    edge?: string;
+    [label: string]: string;
   };
 }
+
+const projects: ProjectProps[] = [
+  {
+    title: "WhiteBoard Pro",
+    description:
+      "An in-page drawing extension with screenshot support, built for seamless annotations on any website.",
+    technology: ["React", "Canvas API", "Plasmo"],
+    features: [
+      "Freehand drawing",
+      "Screenshot capture",
+      "Cross-browser support",
+    ],
+    links: {
+      chrome:
+        "https://chromewebstore.google.com/detail/whiteboard-pro-%E2%80%93-draw-on/bjckpemkhnokkmeecfokigjedmbfiopa",
+      firefox:
+        "https://addons.mozilla.org/en-US/firefox/addon/whiteboard-pro-on-any-site/",
+      edge: "https://microsoftedge.microsoft.com/addons/detail/whiteboard-pro-%E2%80%93-draw-on-/ggllelpkknpjihheinnealgcieeefdjh",
+    },
+  },
+  {
+    title: "Candle-Light",
+    description:
+      "A blue light filter extension with customizable color and intensity. Designed to reduce eye strain across any webpage.",
+    technology: ["JavaScript", "React", "Plasmo"],
+    features: ["Custom color", "Adjustable strength", "Scheduling"],
+    links: {
+      chrome:
+        "https://chromewebstore.google.com/detail/candle-light-bluelight-fi/ibpadkmccjflegicdgmlamljkbedmlpk",
+      firefox:
+        "https://addons.mozilla.org/en-US/firefox/addon/candle-light-bluelight-filter/",
+      edge: "https://microsoftedge.microsoft.com/addons/detail/candle-light-bluelight-/gjdpaepkkcpboaecohngfoijfpclncah",
+    },
+  },
+  {
+    title: "Personal Portfolio",
+    description:
+      "A fully responsive, animated developer portfolio built with React, Tailwind, and Framer Motion. Designed to showcase projects, work experience, and skills with smooth transitions and modern UI.",
+    technology: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Router",
+    ],
+    features: [
+      "SEO-optimized multi-page layout",
+      "Animated route transitions",
+      "Responsive design with dark mode",
+      "Custom lightboard header",
+      "Clean file structure for public repo sharing",
+    ],
+    links: {
+      github: "https://github.com/MoezTofiq/portfolio",
+      live: "https://moeeztofiq.com",
+    },
+  },
+  {
+    title: "Enough",
+    description:
+      "A distraction-blocker extension that removes addictive content from social media feeds.",
+    technology: ["TypeScript", "React", "Supabase"],
+    features: ["Content filtering", "Cloud sync", "Device persistence"],
+    links: {
+      firefox:
+        "https://addons.mozilla.org/en-US/firefox/addon/enough-control-your-feed/",
+      edge: "https://microsoftedge.microsoft.com/addons/detail/enough/omjbnmlafmfaglacmkbikffokaelkjcc",
+    },
+  },
+  {
+    title: "Reddit Shorts Automation",
+    description:
+      "An automated pipeline that generates AI-based story videos using Reddit-style prompts and uploads them to YouTube as Shorts.",
+    technology: [
+      "Python",
+      "FFmpeg",
+      "TTS",
+      "Whisper",
+      "OpenAI/Gemini",
+      "Ollama",
+    ],
+    features: [
+      "LLM story generation",
+      "Voiceover + transcription",
+      "Video creation & auto-upload",
+    ],
+    links: {},
+  },
+  {
+    title: "Object Detection for the Visually Impaired",
+    description:
+      "A mobile tool combining depth and object recognition with real-time voice navigation to assist visually impaired users.",
+    technology: ["MidasNet", "YoloAct", "Google Speech API"],
+    features: ["Real-time object detection", "Depth sensing", "Audio feedback"],
+    links: {},
+  },
+];
 
 const ProjectComponent: React.FC<{ projects: ProjectProps[] }> = ({
   projects,
 }) => {
   return (
-    <div className="w-full max-w-3xl">
+    <div className="w-full max-w-3xl mx-auto flex flex-col items-center justify-start">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-5 p-6 border border-white/20 text-white transition-all duration-300"
+          className="bg-white/10 w-full max-w-3xl backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-5 p-6 border border-white/20 text-white transition-all duration-300"
         >
           <h3 className="text-xl font-semibold tracking-wide">
             {project.title}
@@ -79,84 +174,6 @@ const ProjectComponent: React.FC<{ projects: ProjectProps[] }> = ({
 };
 
 const PersonalProjects = () => {
-  const projects: ProjectProps[] = [
-    {
-      title: "WhiteBoard Pro",
-      description:
-        "An in-page drawing extension with screenshot support, built for seamless annotations on any website.",
-      technology: ["React", "Canvas API", "Plasmo"],
-      features: [
-        "Freehand drawing",
-        "Screenshot capture",
-        "Cross-browser support",
-      ],
-      links: {
-        chrome:
-          "https://chromewebstore.google.com/detail/whiteboard-pro-%E2%80%93-draw-on/bjckpemkhnokkmeecfokigjedmbfiopa",
-        firefox:
-          "https://addons.mozilla.org/en-US/firefox/addon/whiteboard-pro-on-any-site/",
-        edge: "https://microsoftedge.microsoft.com/addons/detail/whiteboard-pro-%E2%80%93-draw-on-/ggllelpkknpjihheinnealgcieeefdjh",
-      },
-    },
-    {
-      title: "Candle-Light",
-      description:
-        "A blue light filter extension with customizable color and intensity. Designed to reduce eye strain across any webpage.",
-      technology: ["JavaScript", "React", "Plasmo"],
-      features: ["Custom color", "Adjustable strength", "Scheduling"],
-      links: {
-        chrome:
-          "https://chromewebstore.google.com/detail/candle-light-bluelight-fi/ibpadkmccjflegicdgmlamljkbedmlpk",
-        firefox:
-          "https://addons.mozilla.org/en-US/firefox/addon/candle-light-bluelight-filter/",
-        edge: "https://microsoftedge.microsoft.com/addons/detail/candle-light-bluelight-/gjdpaepkkcpboaecohngfoijfpclncah",
-      },
-    },
-    {
-      title: "Enough",
-      description:
-        "A distraction-blocker extension that removes addictive content from social media feeds.",
-      technology: ["TypeScript", "React", "Supabase"],
-      features: ["Content filtering", "Cloud sync", "Device persistence"],
-      links: {
-        firefox:
-          "https://addons.mozilla.org/en-US/firefox/addon/enough-control-your-feed/",
-        edge: "https://microsoftedge.microsoft.com/addons/detail/enough/omjbnmlafmfaglacmkbikffokaelkjcc",
-      },
-    },
-    {
-      title: "Reddit Shorts Automation",
-      description:
-        "An automated pipeline that generates AI-based story videos using Reddit-style prompts and uploads them to YouTube as Shorts.",
-      technology: [
-        "Python",
-        "FFmpeg",
-        "TTS",
-        "Whisper",
-        "OpenAI/Gemini",
-        "Ollama",
-      ],
-      features: [
-        "LLM story generation",
-        "Voiceover + transcription",
-        "Video creation & auto-upload",
-      ],
-      links: {},
-    },
-    {
-      title: "Object Detection for the Visually Impaired",
-      description:
-        "A mobile tool combining depth and object recognition with real-time voice navigation to assist visually impaired users.",
-      technology: ["MidasNet", "YoloAct", "Google Speech API"],
-      features: [
-        "Real-time object detection",
-        "Depth sensing",
-        "Audio feedback",
-      ],
-      links: {},
-    },
-  ];
-
   return (
     <RoutePageAnimation>
       <div className="pt-20 relative flex flex-col items-center justify-start w-full h-full z-10 text-white">
