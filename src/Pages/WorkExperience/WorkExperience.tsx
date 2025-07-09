@@ -108,7 +108,7 @@ const WorkExperience = () => {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <h2 className="text-4xl font-bold text-gray-900 text-center mb-8">
-          Work Experience
+          My Professional Journey
         </h2>
         <div className="max-w-4xl mx-auto space-y-10">
           {jobs.map((job, index) => (

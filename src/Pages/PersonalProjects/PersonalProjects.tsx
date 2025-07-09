@@ -131,14 +131,11 @@ const PersonalProjects = () => {
         />
         <meta name="twitter:card" content="summary_large_image" />
         {/* Section Header */}
-        <div className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-6 p-6 border border-white/20 text-white max-w-3xl text-center">
-          <h3 className="text-3xl font-bold tracking-wide">
+        <div className="bg-white/10 w-full backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-6 p-6 border border-white/20 text-white max-w-3xl text-center">
+          {/* <h4 className="text-3xl font-bold tracking-wide">
             Personal Projects
-          </h3>
-          <p className="text-gray-300 mt-2 text-sm">
-            A collection of personal projects I’ve worked on, trying to blend
-            creativity with technology.
-          </p>
+          </h4> */}
+          <p className="text-4xl font-bold mt-2">Made with Curiosity</p>
         </div>
 
         {/* Project List */}
