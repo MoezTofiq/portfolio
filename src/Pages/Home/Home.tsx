@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import RoutePageAnimation from "../../Components/animations/RoutePageAnimation";
 import HeadingCircles from "../../Components/HeadingCircles";
 import LightsBoard from "../../Components/Name";
@@ -13,6 +13,40 @@ const Home = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // const lightSize = 40;
+
+  // const topBottomLightNumber = Math.floor(window.innerWidth / lightSize);
+  // const middleSideLightNumber = Math.floor(window.innerHeight / lightSize);
+  // console.log(
+  //   `Top/Bottom Lights: ${topBottomLightNumber}, Middle Side Lights: ${middleSideLightNumber}`
+  // );
+
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [middleHeight, setMiddleHeight] = useState(0);
+
+  useLayoutEffect(
+    () => {
+      if (contentRef.current) {
+        const height = contentRef.current.offsetHeight;
+        setMiddleHeight(height);
+      }
+    },
+    [
+      /* dependencies that could affect height, like route changes */
+    ]
+  );
+
+  const lightSize = 40;
+  const middleSideLightNumber = Math.floor(middleHeight / lightSize);
+  let topBottomLightNumber = Math.floor(window.innerWidth / lightSize) + 1;
+  if (topBottomLightNumber < 3) {
+    // Ensure at least 3 lights for aesthetics
+    topBottomLightNumber = 3;
+  } else if (topBottomLightNumber > 20) {
+    // Limit to a maximum of 10 lights for aesthetics
+    topBottomLightNumber = 20;
+  }
 
   return (
     <RoutePageAnimation>
@@ -42,25 +76,23 @@ const Home = () => {
           content="Muhammad Moeez | personal portfolio"
         />
         {/* Name Board */}
-        {isMobile ? (
-          <LightsBoardMobile
-            topBottomLightNumber={
-              window.innerWidth < 321 ? 9 : window.innerWidth < 376 ? 11 : 12
-            }
-            middleSideLightNumber={
-              window.innerWidth < 321 ? 3 : window.innerWidth < 376 ? 3 : 3
-            }
-            rotationAngle={0}
-            inputText={["Muhammad Moeez"]}
-          />
-        ) : (
-          <LightsBoard
-            topBottomLightNumber={20}
-            middleSideLightNumber={5}
-            rotationAngle={5}
-            inputText={["Muhammad Moeez"]}
-          />
-        )}
+        <div ref={contentRef}>
+          {isMobile ? (
+            <LightsBoardMobile
+              topBottomLightNumber={topBottomLightNumber}
+              middleSideLightNumber={middleSideLightNumber}
+              rotationAngle={0}
+              inputText={["Muhammad Moeez"]}
+            />
+          ) : (
+            <LightsBoard
+              topBottomLightNumber={topBottomLightNumber}
+              middleSideLightNumber={middleSideLightNumber}
+              rotationAngle={5}
+              inputText={["Muhammad Moeez"]}
+            />
+          )}
+        </div>
 
         {/* Subheading */}
         <div
