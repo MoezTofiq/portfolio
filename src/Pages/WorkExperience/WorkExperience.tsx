@@ -24,9 +24,43 @@ const jobs: JobProps[] = [
     date: "06/2023 - Present",
     projectsWorkedOn: [
       {
+        title: "Lyfers",
+        description:
+          "Led development of a full-stack community + e-commerce platform with admin panel, Printful integration, payment gateways, and dynamic QR code generation.",
+        technology: ["React", "Node.js", "SQL", "Printful", "Stripe", "PayPal"],
+        workDone: [
+          "Designed complete architecture and database schema",
+          "Led team of 2 engineers through development and delivery",
+          "Managed client demos, requirements, and technical documentation",
+          "Integrated third-party services (Printful, Stripe, PayPal)",
+        ],
+      },
+      {
+        title: "STL Fleet Management System",
+        description:
+          "Led development of and Stabilized and extended a legacy fleet system by fixing critical bugs and adding new features across frontend and backend.",
+        technology: ["React", "Node.js"],
+        workDone: [
+          "Audited codebase and resolved major bugs",
+          "Added scalable features for fleet tracking and data handling",
+          "Mentored junior developer to ensure code stability",
+        ],
+      },
+      {
+        title: "BuildClub",
+        description:
+          "Modernized a legacy codebase and built a cross-browser extension to scrape and sync user data from major US stores.",
+        technology: ["React", "GraphQL", "Browser Extension APIs"],
+        workDone: [
+          "Refactored and updated outdated code",
+          "Developed DOM injection and dynamic content extraction features",
+          "Led a team of 3 developers in UI and backend integration",
+        ],
+      },
+      {
         title: "LivingAI",
         description:
-          "Developed a WIX extension allowing users to add an AI presenter answering text & audio queries with text and video responses.",
+          "WIX extension that allows users to add an AI presenter who answers queries via text & video.",
         technology: [
           "AWS DynamoDB",
           "AWS Lambda",
@@ -34,19 +68,30 @@ const jobs: JobProps[] = [
           "Google App Script",
         ],
         workDone: [
+          "Built AI chatbot using ChatGPT",
           "Developed Google Slides extension in React",
-          "Built an AI chatbot with ChatGPT integration",
-          "Implemented real-time video response streaming using D-ID",
+          "Streamed video responses via D-ID integration",
         ],
       },
       {
         title: "Car Rental Management System",
         description:
-          "Developed a car rental system with REST API integration and responsive UI elements.",
+          "System for managing rental inventory, booking, and document uploads.",
         technology: ["MongoDB", "REST API", "React", "PSPDFKit"],
         workDone: [
-          "Designed custom UI with tables, chips, and graphs",
-          "Integrated PSPDFKit for PDF uploads and edits",
+          "Custom UI with tables, chips, and graphs",
+          "Integrated PSPDFKit for PDF upload/edit",
+        ],
+      },
+      {
+        title: "Auto Fitness Logger",
+        description:
+          "A nutrition tracking web app that uses Flask, ChatGPT, and WhatsApp API for real-time food analysis and syncs with Google Sheets.",
+        technology: ["Flask", "React", "ChatGPT API", "Google Sheets API"],
+        workDone: [
+          "Built full-stack Flask + React app",
+          "Integrated WhatsApp API for real-time logging",
+          "Used ChatGPT for nutritional parsing and feedback",
         ],
       },
     ],
@@ -54,6 +99,8 @@ const jobs: JobProps[] = [
       "React",
       "Node.js",
       "MongoDB",
+      "SQL",
+      "GraphQL",
       "AWS",
       "Google App Script",
       "Flask",
@@ -67,8 +114,15 @@ const jobs: JobProps[] = [
     date: "10/2022 - 06/2023",
     projectsWorkedOn: [],
     paragraphWorkedOn:
-      "Built and optimized APIs, improved mobile UI/UX in React Native, and integrated Firebase for real-time notifications.",
-    skillsUsed: ["React Native", "Node.js", "AWS", "Postgres", "Firebase"],
+      "Refactored backend APIs, improved React Native app UI/UX, integrated Gmail and Firebase services, and implemented unit/E2E testing using Jest.",
+    skillsUsed: [
+      "React Native",
+      "Node.js",
+      "AWS",
+      "Postgres",
+      "Firebase",
+      "Jest",
+    ],
   },
   {
     company: "LUMS - CureLogix",
@@ -76,8 +130,8 @@ const jobs: JobProps[] = [
     date: "05/2022 - 09/2022",
     projectsWorkedOn: [],
     paragraphWorkedOn:
-      "Researched and solved issues in Cure-logix Health Suite (CLHS), integrated FBR POS system, and customized ERPNext.",
-    skillsUsed: ["ERPNext", "FRB POS", "JavaScript"],
+      "Integrated Pakistan’s FBR POS system into ERPNext and maintained CureLogix Health Suite (CLHS) by resolving issues and documenting feature requests.",
+    skillsUsed: ["ERPNext", "FBR POS", "JavaScript"],
   },
 ];
 

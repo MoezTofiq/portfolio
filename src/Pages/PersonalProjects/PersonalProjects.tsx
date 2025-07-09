@@ -82,26 +82,79 @@ const ProjectComponent: React.FC<{ projects: ProjectProps[] }> = ({
 const PersonalProjects = () => {
   const projects: ProjectProps[] = [
     {
-      title: "Enough",
-      description: "A cross-browser content-blocking tool for social media.",
-      technology: ["TypeScript", "React", "Firebase"],
-      features: ["Content filtering", "Cloud sync"],
+      title: "WhiteBoard Pro",
+      description:
+        "An in-page drawing extension with screenshot support, built for seamless annotations on any website.",
+      technology: ["React", "Canvas API", "Plasmo"],
+      features: [
+        "Freehand drawing",
+        "Screenshot capture",
+        "Cross-browser support",
+      ],
       links: {
-        chrome: "https://example.com/",
-        firefox: "https://example.com/",
-        edge: "https://example.com/",
+        chrome:
+          "https://chromewebstore.google.com/detail/whiteboard-pro-%E2%80%93-draw-on/bjckpemkhnokkmeecfokigjedmbfiopa",
+        firefox:
+          "https://addons.mozilla.org/en-US/firefox/addon/whiteboard-pro-on-any-site/",
+        edge: "https://microsoftedge.microsoft.com/addons/detail/whiteboard-pro-%E2%80%93-draw-on-/ggllelpkknpjihheinnealgcieeefdjh",
       },
     },
     {
       title: "Candle-Light",
-      description: "A cross-browser customizable blue light filter extension.",
-      technology: ["JavaScript", "React", "CSS"],
-      features: ["Customizable color", "Adjustable filter strength"],
+      description:
+        "A blue light filter extension with customizable color and intensity. Designed to reduce eye strain across any webpage.",
+      technology: ["JavaScript", "React", "Plasmo"],
+      features: ["Custom color", "Adjustable strength", "Scheduling"],
       links: {
-        chrome: "https://example.com/",
-        firefox: "https://example.com/",
-        edge: "https://example.com/",
+        chrome:
+          "https://chromewebstore.google.com/detail/candle-light-bluelight-fi/ibpadkmccjflegicdgmlamljkbedmlpk",
+        firefox:
+          "https://addons.mozilla.org/en-US/firefox/addon/candle-light-bluelight-filter/",
+        edge: "https://microsoftedge.microsoft.com/addons/detail/candle-light-bluelight-/gjdpaepkkcpboaecohngfoijfpclncah",
       },
+    },
+    {
+      title: "Enough",
+      description:
+        "A distraction-blocker extension that removes addictive content from social media feeds.",
+      technology: ["TypeScript", "React", "Supabase"],
+      features: ["Content filtering", "Cloud sync", "Device persistence"],
+      links: {
+        firefox:
+          "https://addons.mozilla.org/en-US/firefox/addon/enough-control-your-feed/",
+        edge: "https://microsoftedge.microsoft.com/addons/detail/enough/omjbnmlafmfaglacmkbikffokaelkjcc",
+      },
+    },
+    {
+      title: "Reddit Shorts Automation",
+      description:
+        "An automated pipeline that generates AI-based story videos using Reddit-style prompts and uploads them to YouTube as Shorts.",
+      technology: [
+        "Python",
+        "FFmpeg",
+        "TTS",
+        "Whisper",
+        "OpenAI/Gemini",
+        "Ollama",
+      ],
+      features: [
+        "LLM story generation",
+        "Voiceover + transcription",
+        "Video creation & auto-upload",
+      ],
+      links: {},
+    },
+    {
+      title: "Object Detection for the Visually Impaired",
+      description:
+        "A mobile tool combining depth and object recognition with real-time voice navigation to assist visually impaired users.",
+      technology: ["MidasNet", "YoloAct", "Google Speech API"],
+      features: [
+        "Real-time object detection",
+        "Depth sensing",
+        "Audio feedback",
+      ],
+      links: {},
     },
   ];
 
