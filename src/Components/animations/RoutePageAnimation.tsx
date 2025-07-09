@@ -20,15 +20,17 @@ const pageTransition = {
 
 const RoutePageAnimation = ({ children }: { children: React.ReactElement }) => {
   return (
-    <motion.div
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
-    >
-      {children}
-    </motion.div>
+    <>
+      <motion.div
+        initial="initial"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+        transition={pageTransition}
+      >
+        {children}
+      </motion.div>
+    </>
   );
 };
 

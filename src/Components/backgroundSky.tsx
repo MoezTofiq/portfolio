@@ -27,7 +27,7 @@ const BackgroundSky: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 right-0 left-0 bottom-0 z-0 bg-[#1D1522] ">
+    <div className="fixed top-0 right-0 left-0 bottom-0 z-0 bg-[#1D1522]  will-change-transform transform translate-z-0 ">
       <div className="relative w-full min-h-screen h-full bg-[#1D1522] overflow-hidden">
         {stars.map((star, index) => (
           <div

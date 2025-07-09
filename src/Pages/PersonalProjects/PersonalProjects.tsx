@@ -1,4 +1,5 @@
 import RoutePageAnimation from "../../Components/animations/RoutePageAnimation";
+import { motion } from "motion/react";
 
 interface ProjectProps {
   title: string;
@@ -176,40 +177,46 @@ const ProjectComponent: React.FC<{ projects: ProjectProps[] }> = ({
 const PersonalProjects = () => {
   return (
     <RoutePageAnimation>
-      <div className="pt-20 relative flex flex-col items-center justify-start w-full h-full z-10 text-white">
-        <title>Personal Projects | My Developer Portfolio</title>
-        <meta
-          name="description"
-          content="A showcase of my passion projects — browser extensions, mobile apps, and experiments."
-        />
-        <meta
-          name="keywords"
-          content="personal projects, side projects, extensions, apps, developer work"
-        />
-        <meta
-          property="og:title"
-          content="Personal Projects | My Developer Portfolio"
-        />
-        <meta
-          property="og:description"
-          content="Explore the tools and software I’ve built in my free time."
-        />
-        <meta
-          property="og:url"
-          content="https://your-domain.com/personal_projects"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        {/* Section Header */}
-        <div className="bg-white/10 w-full backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-6 p-6 border border-white/20 text-white max-w-3xl text-center">
-          {/* <h4 className="text-3xl font-bold tracking-wide">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
+      >
+        <div className="pt-20 relative flex flex-col items-center justify-start w-full h-full z-10 text-white ">
+          <title>Personal Projects | My Developer Portfolio</title>
+          <meta
+            name="description"
+            content="A showcase of my passion projects — browser extensions, mobile apps, and experiments."
+          />
+          <meta
+            name="keywords"
+            content="personal projects, side projects, extensions, apps, developer work"
+          />
+          <meta
+            property="og:title"
+            content="Personal Projects | My Developer Portfolio"
+          />
+          <meta
+            property="og:description"
+            content="Explore the tools and software I’ve built in my free time."
+          />
+          <meta
+            property="og:url"
+            content="https://your-domain.com/personal_projects"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          {/* Section Header */}
+          <div className="bg-white/10 w-full backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-6 p-6 border border-white/20 text-white max-w-3xl text-center">
+            {/* <h4 className="text-3xl font-bold tracking-wide">
             Personal Projects
           </h4> */}
-          <p className="text-4xl font-bold mt-2">Made with Curiosity</p>
-        </div>
+            <p className="text-4xl font-bold mt-2">Made with Curiosity</p>
+          </div>
 
-        {/* Project List */}
-        <ProjectComponent projects={projects} />
-      </div>
+          {/* Project List */}
+          <ProjectComponent projects={projects} />
+        </div>
+      </motion.div>
     </RoutePageAnimation>
   );
 };
