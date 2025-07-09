@@ -12,31 +12,15 @@ interface ProjectProps {
   };
 }
 
-const getBrowser = () => {
-  if (navigator.userAgent.includes("Firefox")) return "firefox";
-  if (navigator.userAgent.includes("Edg")) return "edge";
-  if (navigator.userAgent.includes("Chrome")) return "chrome";
-  return null;
-};
-
 const ProjectComponent: React.FC<{ projects: ProjectProps[] }> = ({
   projects,
 }) => {
-  const browser = getBrowser();
-
-  const handleProjectClick = (links: ProjectProps["links"]) => {
-    const url = browser ? links[browser] : null;
-    if (url) window.open(url, "_blank");
-    else alert("No store link available for your browser.");
-  };
-
   return (
     <div className="w-full max-w-3xl">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-5 p-6 border border-white/20 text-white transition-all duration-300 hover:bg-white/20 hover:scale-105 cursor-pointer"
-          onClick={() => handleProjectClick(project.links)}
+          className="bg-white/10 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden m-5 p-6 border border-white/20 text-white transition-all duration-300"
         >
           <h3 className="text-xl font-semibold tracking-wide">
             {project.title}
@@ -50,9 +34,7 @@ const ProjectComponent: React.FC<{ projects: ProjectProps[] }> = ({
             </h4>
             <ul className="list-disc pl-5 text-gray-300">
               {project.technology.map((tech, techIndex) => (
-                <li key={techIndex} className="hover:text-blue-300 transition">
-                  {tech}
-                </li>
+                <li key={techIndex}>{tech}</li>
               ))}
             </ul>
           </div>
@@ -64,15 +46,32 @@ const ProjectComponent: React.FC<{ projects: ProjectProps[] }> = ({
             </h4>
             <ul className="list-disc pl-5 text-gray-300">
               {project.features.map((feature, featureIndex) => (
-                <li
-                  key={featureIndex}
-                  className="hover:text-blue-300 transition"
-                >
-                  {feature}
-                </li>
+                <li key={featureIndex}>{feature}</li>
               ))}
             </ul>
           </div>
+
+          {/* Links */}
+          {Object.keys(project.links).length > 0 && (
+            <div className="mt-4 border-t border-white/20 pt-4">
+              <h4 className="text-sm font-medium text-gray-200 uppercase mb-2">
+                Links
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {Object.entries(project.links).map(([key, url]) => (
+                  <a
+                    key={key}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-amber-100/90 text-black px-4 py-1.5 rounded-md text-sm font-semibold hover:bg-amber-200 transition"
+                  >
+                    {key[0].toUpperCase() + key.slice(1)}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       ))}
     </div>
